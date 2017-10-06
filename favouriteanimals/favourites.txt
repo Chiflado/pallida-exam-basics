@@ -1,2 +1,5 @@
-racoon
+cat
+bear
+red panda
+dog
 racoon

@@ -27,6 +27,7 @@ class FavouriteAnimals:
         if self.arg == 'add':
             if self.check_animals(sys.argv[2]) == True:
                 self.add_animal(sys.argv[2])
+                print(self.list)
             else:
                 print('Animal already in list')
 
@@ -40,10 +41,10 @@ class FavouriteAnimals:
 
     def check_animals(self, animal):
         with open('favourites.txt', 'r') as text_file:
+            new_animal = animal + '\n'
             self.list = list(text_file)
-            for i in range(len(self.list)):
-                if self.list[i] != animal:
-                    return True
+            if new_animal not in self.list:
+                return True
 
 
 fav_anmimals = FavouriteAnimals()
