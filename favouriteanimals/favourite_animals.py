@@ -25,7 +25,10 @@ class FavouriteAnimals:
         if self.arg == None:
             self.print_usage()
         if self.arg == 'add':
-            self.add_animal(sys.argv[2])
+            if self.check_animals(sys.argv[2]) == True:
+                self.add_animal(sys.argv[2])
+            else:
+                print('Animal already in list')
 
     def print_usage(self):
         print( 'fav_animals [animal] [animal]')
@@ -34,6 +37,13 @@ class FavouriteAnimals:
         with open('favourites.txt', 'a') as text_file:
             text_file.write(animal + '\n')
             text_file.close
+
+    def check_animals(self, animal):
+        with open('favourites.txt', 'r') as text_file:
+            self.list = list(text_file)
+            for i in range(len(self.list)):
+                if self.list[i] != animal:
+                    return True
 
 
 fav_anmimals = FavouriteAnimals()

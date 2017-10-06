@@ -1,3 +1,2 @@
 racoon
-dog
-bear
+racoon
