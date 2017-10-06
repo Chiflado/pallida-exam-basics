@@ -32,8 +32,10 @@ The application is accepted if:
 
 ###  What is the difference between a function and a method? [2p]
 #### Your answer:
-[add your answer here]
+Function is a piece of code that is called by name. It can be passed data to operate on (the parameters) and can optionally return data. All data that is passed to a function is explicitly passed.
+
+Method is a piece of code that is called by name as well but that is associated with an object. Almost the same like the function but is passed for the object which is called and it is able to operate on data that is contained within the class.
 
 ### What is the constructor? When it is used? [2p]
 #### Your answer:
-[add your answer here]
+Constructor is a method what initialize a newly created object and automatically runs when we instantiates the a object. It contains parameters and even methods for the object
