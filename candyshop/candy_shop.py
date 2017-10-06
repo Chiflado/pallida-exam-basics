@@ -32,8 +32,13 @@ class CandyShop:
             self.sugar -= 5
             self.candies.append(sweet)
 
-    def sell(self, candy, amount):
-        pass
+    def sell(self, sweet, amount):
+        if sweet == 'candy':
+            self.money += 20
+            self.candies.remove(sweet)
+        elif sweet == 'lollipop':
+            self.sugar += 10
+            self.candies.remove(sweet)
 
     def raise_prices(self, amount):
         pass
