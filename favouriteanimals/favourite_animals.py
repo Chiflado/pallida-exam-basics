@@ -24,9 +24,16 @@ class FavouriteAnimals:
         self.arg = self.get_arguments()
         if self.arg == None:
             self.print_usage()
+        if self.arg == 'add':
+            self.add_animal(sys.argv[2])
 
     def print_usage(self):
         print( 'fav_animals [animal] [animal]')
+
+    def add_animal(self, animal):
+        with open('favourites.txt', 'a') as text_file:
+            text_file.write(animal + '\n')
+            text_file.close
 
 
 fav_anmimals = FavouriteAnimals()
