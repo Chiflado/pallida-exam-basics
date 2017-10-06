@@ -20,10 +20,17 @@
 class CandyShop:
 
     def __init__(self, sugar):
-        pass
-        
-    def create_sweets(self, candy):
-        pass
+        self.candies = []
+        self.money = 0
+        self.sugar = sugar
+
+    def create_sweets(self, sweet):
+        if sweet == 'candy':
+            self.sugar -= 10
+            self.candies.append(sweet)
+        elif sweet == 'lollipop':
+            self.sugar -= 5
+            self.candies.append(sweet)
 
     def sell(self, candy, amount):
         pass
