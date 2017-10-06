@@ -44,7 +44,7 @@ class CandyShop:
         pass
 
     def buy_sugar(self, amount):
-        pass
+        self.sugar += amount
     
             
 candy_shop = CandyShop(300)
