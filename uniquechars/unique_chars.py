@@ -3,12 +3,13 @@
 # Create basic unit tests for it with at least 3 different test cases
 # Should print out:
 # ["n", "g", "r", "m"]
-
+from collections import Counter
 
 def unique_characters(my_string):
     output = []
     for i in my_string:
         output.append(i)
+    output = [el for el, count in Counter(output).items() if count == 1]
     return output
 
         
