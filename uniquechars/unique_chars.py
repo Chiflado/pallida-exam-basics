@@ -7,10 +7,12 @@ from collections import Counter
 
 def unique_characters(my_string):
     output = []
-    for i in my_string:
-        output.append(i)
-    output = [el for el, count in Counter(output).items() if count == 1]
-    return output
-
+    try:
+        for i in my_string:
+            output.append(i)
+        output = [el for el, count in Counter(output).items() if count == 1]
+        return output
+    except TypeError:
+        return False
         
 print(unique_characters("anagram"))
